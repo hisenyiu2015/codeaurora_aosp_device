@@ -1,0 +1,16 @@
+Device Tree for Lenovo X3
+===========================================
+
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | Dual-core 1.8 GHz ARM® Cortex™ A57 and quad-core 1.5 GHz ARM® Cortex™ A53
+Chipset | Qualcomm MSM8992 Snapdragon 808
+GPU     | Adreno 418
+Memory  | 3GB RAM
+Storage | 32GB/64GB
+MicroSD | Up to 128 GB
+Battery | Non-removable Li-Po 3500 mAh battery
+Display | 1080 x 1920 pixels, 5.5 inches IPS
+Camera  | Rear 21 MP PDAF, dual-LED (dual tone) flash; Front 8 MP fixed-focus
+
+![Lenovo X3](http://p4.lefile.cn/product/adminweb/2016/04/23/UOAkle9qUvFWbGc1ewOYHSVJS-8365.w544.jpg "Lenovo X3")
