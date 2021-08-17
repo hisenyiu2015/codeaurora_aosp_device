@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/lenovo/x3/msm8992.mk)
 
+# include additional build utilities
+-include device/lenovo/x3/utils.mk
+
 # Inherit proprietary device parts
 $(call inherit-product-if-exists, vendor/lenovo/x3/x3-vendor.mk)
 
@@ -30,3 +33,20 @@ PRODUCT_NAME := aosp_x3
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := x3
 PRODUCT_MANUFACTURER := Lenovo
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.custom_ecc=1 \
+    persist.radio.sib16_support=1 \
+    persist.radio.multisim.config=dsds \
+    persist.radio.VT_CAM_INTERFACE=1 \
+    ro.frp.pst=/dev/block/bootdevice/by-name/config
+
+# Reduce client buffer size for fast audio output tracks
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1
+
+# Low latency audio buffer size in frames
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio_hal.period_size=192
