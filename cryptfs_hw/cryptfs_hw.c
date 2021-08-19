@@ -67,6 +67,8 @@
 
 #define KEYMASTER_PARTITION_NAME "/dev/block/bootdevice/by-name/keymaster"
 
+#define QSEECOM_UP_CHECK_COUNT 10
+
 static int loaded_library = 0;
 static int (*qseecom_create_key)(int, void*);
 static int (*qseecom_update_key)(int, void*, void*);
