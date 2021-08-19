@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BOARD_USES_LIBC_WRAPPER := true
+
 LOCAL_PATH := device/lenovo/x3
 
 # Assertions
