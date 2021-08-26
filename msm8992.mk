@@ -159,6 +159,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
 
 # NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    nfc_nci.bcm2079x.default \
+    NfcNci \
+    nfcee_access.xml \
+    Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/nfc/libnfc-brcm-20795a10.conf:system/etc/libnfc-brcm-20795a10.conf \
+    $(LOCAL_PATH)/nfc/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
